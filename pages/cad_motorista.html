@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="import" href="pages/login.html">
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    green1: '#4d7a4c',
+                    Yellow: '#dcaa36',
+                    green2: '#5ea65e',
+                  }
+                }
+              }
+            }
+          </script>
+    </head>
+
+    <body>
+
+        <!-- component -->
+        <aside class="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+            <div>
+                <div class="w-full pt-10 pb-5">
+                    <a href="#">
+                        <img src="../img/logo-300x120.png" class="w-44 mx-auto" alt="tailus logo">
+                    </a>
+                </div>
+
+                <ul class="space-y-2 tracking-wide mt-8">
+
+                    <li>
+                        <a href="/index.html" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-green1 to-green2">
+                            <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
+                                <path d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z" class="fill-current text-cyan-400 dark:fill-slate-600"></path>
+                                <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z" class="fill-current text-cyan-200 group-hover:text-cyan-300"></path>
+                                <path d="M13 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-1Z" class="fill-current group-hover:text-sky-300"></path>
+                            </svg>
+                            <span class="-mr-1 font-medium">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./motorista.html" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path class="fill-current text-gray-300 group-hover:text-cyan-300" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
+                                <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
+                            </svg>
+                            <span class="group-hover:text-gray-700">Motorista</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="./veiculo.html" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 16 16">
+                                <path class="fill-current group-hover:text-cyan-300" d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z"/>
+                            </svg>
+                            <span class="group-hover:text-gray-700">Veículo</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="px-6 -mx-6 pt-4 flex justify-between items-center border-t">
+                <a href="./login.html">
+                    <button class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                        </svg>
+                        <span class="group-hover:text-gray-700">Sair</span>
+                    </button>
+                </a>
+            </div>
+        </aside>
+
+
+        <div class="ml-auto h-screen lg:w-[75%] xl:w-[80%] 2xl:w-[85%] bg-gray-100">
+
+            <div class="sticky z-10 top-0 h-16 border-b-2 border-Yellow  bg-white lg:py-2.5">
+                <div class="px-6 flex items-center justify-between space-x-4 2xl:container">
+                    <h5 hidden class="text-2xl text-gray-600 font-medium lg:block">Motorista</h5>
+                    <button class="w-12 h-16 -mr-2 border-r lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 my-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <div class="flex space-x-4">
+                        <button aria-label="search" class="w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200 md:hidden">
+                            <svg xmlns="http://ww50w3.org/2000/svg" class="w-4 mx-auto fill-current text-gray-600" viewBox="0 0 35.997 36.004">
+                                <path id="Icon_awesome-search" data-name="search" d="M35.508,31.127l-7.01-7.01a1.686,1.686,0,0,0-1.2-.492H26.156a14.618,14.618,0,1,0-2.531,2.531V27.3a1.686,1.686,0,0,0,.492,1.2l7.01,7.01a1.681,1.681,0,0,0,2.384,0l1.99-1.99a1.7,1.7,0,0,0,.007-2.391Zm-20.883-7.5a9,9,0,1,1,9-9A8.995,8.995,0,0,1,14.625,23.625Z"></path>
+                            </svg>
+                        </button>
+                        <button aria-label="chat" class="w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 m-auto text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                            </svg>
+                        </button>
+                        <button aria-label="notification" class="w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 m-auto text-gray-600" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="flex items-center justify-between mt-10 m-5">
+                <h1 class="text-2xl font-semibold text-gray-600 border-b border-green2 pb-2">
+                    Motorista - Cadastro
+                </h1>
+                <a href="./motorista.html">
+                    <button class="flex items-center justify-center gap-3 text-sm bg-Yellow h-8 w-36 text-white rounded-md font-bold uppercase">
+                        <svg class="h-4 w-4" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z"/>
+                            <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                          </svg>
+                        Voltar
+                    </button>
+                </a>
+            </div>
+
+            <!-- component -->
+            <div class="flex items-center justify-center overflow-hidden rounded-lg border border-gray-200 shadow-xl m-5 px-5 py-10">
+                <form class="w-3/4">
+
+                    <div class="flex items-center gap-6">
+
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                              Nome
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="text" placeholder="Nome do Motorista...">
+                        </div>
+    
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                              Data de nascimento
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="date">
+                        </div>
+                        
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                              CPF
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="text" placeholder="CPF do Motorista...">
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-6">
+
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                                Número da CNH
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="text" placeholder="Número da CNH...">
+                        </div>
+    
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                              Nr. Registro CNH
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="text" placeholder="Nr. Registro CNH...">
+                        </div>
+
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                              Data de expedição da CNH
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="date">
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-6">
+
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                                Categoria da CNH
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="text" placeholder="Categoria da CNH...">
+                        </div>
+                        
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                              Data de validade Exame
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="date">
+                        </div>
+
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                              Data da 1° habilitação
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="date">
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-6">
+
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                                Filial do Sistema
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" type="text" placeholder="Filial do Sistema...">
+                        </div>
+
+                        
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                                Descrição
+                            </label>
+                            <textarea class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" cols="10" rows="1" placeholder="Descrição..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="flex gap-6">
+                       
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                                Itens em Desacordo
+                            </label>
+                            <textarea class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" cols="10" rows="1" placeholder="Itens em Desacordo..."></textarea>
+                        </div>
+
+
+                        <div class="w-full">
+                            <label class="block uppercase tracking-wide text-grey-darker text-gray-400 text-xs font-semibold mb-2">
+                                Observações
+                            </label>
+                            <textarea class="appearance-none block w-full bg-gray-200 text-grey-darker border border-red rounded-lg py-3 px-4 mb-3" cols="10" rows="1" placeholder="Observações..."></textarea>
+                        </div>
+
+                    </div>
+                    
+                    <div class="flex items-center justify-end my-2">
+                        <a href="./motorista.html" class="flex items-center justify-center gap-3 text-sm bg-green2 h-10 w-40 text-white rounded-md font-bold uppercase">
+                            Salvar
+                            <svg class="h-4 w-4" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                                <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                                <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
